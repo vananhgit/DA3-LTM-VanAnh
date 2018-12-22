@@ -1,0 +1,68 @@
+<table>
+							<tbody>
+								<tr>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+								</tr>
+								<tr>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+								</tr>
+								<tr>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+								</tr>
+								<tr>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+								</tr>
+								<tr>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+									<td><input id="" maxlength="1" style="width: 45px;"></td>
+								</tr>
+							</tbody>
+						</table>
+						
+						
+	$('#btnCreateMatrixSq')
+					.click(
+							function() {
+								var alp = shuffle();
+								var row = $('#RowMatrixSq').val();
+								var dem = 0;
+								var rs = '<table><tbody>';
+								for (var i = 1; i <= row; i++) {
+									rs += '<tr>';
+									for (var j = 1; j <= row; j++) {
+										rs += "<td><input id='cellMatrix"
+												+ i
+												+ j
+												+ "' maxlength='1'  style='width: 45px;' value='"
+												+ alp[dem] + "'></td>";
+										dem++;
+									}
+									rs += "</tr>";
+								}
+								rs += "</tbody></table>";
+								$('#ajax-matrix2').html(rs);
+							});
+
+					});					
+						
+						
+						
